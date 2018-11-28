@@ -64,7 +64,7 @@ namespace EveOnlineApp
 
             foreach (EveObjModel obj in importedList)
             {
-                if (obj.is_buy_order)
+                if (obj.Is_buy_order)
                     buyList.Add(obj);
                 else
                     sellList.Add(obj);
@@ -80,15 +80,17 @@ namespace EveOnlineApp
             foreach (EveObjModel obj in buyList)//.OrderBy(EveObjModel => EveObjModel.type_id))
             {   
                 // int index sees how many items with the same type_id and with a lower price exists
-                int index = buyList.FindIndex(item => (item.type_id == obj.type_id) && (item.price < obj.price));
+                int index = buyList.FindIndex(item => (item.Type_id == obj.Type_id) && (item.Price < obj.Price));
                 // if there is more than 0, that means that there are items we need to cut. 
                 // We remove all where type_id is the same and the price is lower than the current objects. 
                 if (index > 0)
-                    buyList.RemoveAll(x => x.type_id == obj.type_id && x.price < obj.price);
+                {
+                    buyList.RemoveAll(x => x.Type_id == obj.Type_id && x.Price < obj.Price);
+                }
 
                 // int indexSecondRound checks if other objects with the same type_id exists. If they do, that
                 // means that the current object is not the one with the highest price. There it is removed from the buyList. 
-                int indexSecondRound = buyList.FindIndex(item => item.type_id == obj.type_id);
+                int indexSecondRound = buyList.FindIndex(item => item.Type_id == obj.Type_id);
                 // removes the current obj.
                 if (indexSecondRound > 0)
                     buyList.Remove(obj);

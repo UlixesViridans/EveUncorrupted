@@ -11,13 +11,16 @@ namespace EveOnlineApp
     public class EveObjModel
     {
         [DataMember]
-        public bool is_buy_order { get; set; }
+        public bool Is_buy_order { get; set; }
 
         [DataMember]
-        public double price { get; set; }
+        public decimal Price { get; set; }
 
         [DataMember]
-        public int type_id { get; set; }
+        public int Type_id { get; set; }
+
+        [DataMember]
+        public String Type_Name { get; set; }
 
     }
 }
