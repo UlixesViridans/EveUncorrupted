@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="EveOnlineApp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EveOnlineApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="0,10,10,10" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Button x:Name="btn_start" Content="Get data" HorizontalAlignment="Left" Height="106" Margin="1188,712,0,0" VerticalAlignment="Top" Width="231" FontSize="36" Background="#33255C1F" FontWeight="Bold" Click="Btn_start_Click"/>
+        <TextBox x:Name="buyList" HorizontalAlignment="Left" Height="372" Margin="43,563,0,0" Text="TextBox" VerticalAlignment="Top" Width="1064" PlaceholderText="Press button for magic"/>
+        <TextBox x:Name="sellList" HorizontalAlignment="Left" Margin="43,57,0,0" Text="TextBox" VerticalAlignment="Top" Height="433" Width="1064"/>
+        <TextBox x:Name="regionBox" HorizontalAlignment="Left" Margin="1158,57,0,0" Text="Type a region to se its market..." VerticalAlignment="Top" Height="47" Width="292" FontWeight="Bold" FontSize="18"/>
+    </Grid>
+</Page>
