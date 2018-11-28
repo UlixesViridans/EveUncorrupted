@@ -97,9 +97,11 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="EveObjModel.cs" />
+    <Compile Include="ItemNameDatabase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OrderHashTable.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
