@@ -8,5 +8,6 @@ namespace EveOnlineApp
 {
     class OrderHashTable
     {
+
     }
 }
