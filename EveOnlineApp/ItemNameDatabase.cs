@@ -12,7 +12,7 @@ namespace EveOnlineApp
 
        public ItemNameDatabase()
        {
-
+            ItemNameDictionary = new Dictionary<int, string>();
        }
 
         //returns the english name for an item 
